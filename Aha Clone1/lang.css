@@ -1,0 +1,156 @@
+.bg
+{
+    background-image:url('https://img.freepik.com/free-photo/abstract-luxury-blur-dark-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-90230.jpg?t=st=1720036509~exp=1720040109~hmac=5fb6e51c25102a7d97409e3463c7108144d7937e0d346aac400ad9f1e0b3b663&w=1380');
+    background-size:cover;
+    height:100vh;
+    padding:25px;
+}
+.im
+{
+    width:4vw;
+
+}
+
+.mid
+{
+    height:400px;
+    width:80%;
+    background-color:black;
+    align-content:center;
+    text-align:center;
+    border-radius:10px;
+    
+    
+
+}
+
+.proceedbtn
+{
+    height:48px;
+    width:280px;
+    border-style:solid;
+    border-radius:24px;
+    background-color:orangered;
+    border-width:2px;
+    padding:5px;
+    color:white;
+    font-size:17px;
+    font-family:Roboto;
+    align-content: center;
+    text-align: center;
+    font-weight:bold;
+}
+.langbutton
+{
+    height:48px;
+    width:130px;
+    border-style:solid;
+    border-radius:24px;
+    background-color:grey;
+    border-width:2px;
+    padding:5px;
+    color:white;
+    font-size:16px;
+    font-weight:Bold;
+    font-family:Roboto;
+    align-content: center;
+    text-align: center;
+}
+
+.ab{
+            position: absolute;
+            padding :0px;
+            top:20%;
+            padding:20px;
+            
+        }
+
+.im
+{
+    height:100px;
+    width:100px;
+    align-content:right;
+    text-content:right;
+    
+}
+.sub1
+{
+    width:80%;
+}
+.balayya
+{
+    border-radius:8px;
+    border-syle:solid;
+    border-width:0px;
+    
+    margin:5px;
+    height:100px;
+    
+
+}
+.pa
+{
+    color:white;
+    font-weight: bold;
+    text-align: left;
+    font-size:18px;
+}
+.c
+{
+    color:orangered;
+}
+.langcard
+{
+    margin:30px;
+    width:65%;
+    margin-left:80px;
+    height:300px;
+}
+.Proceedcard
+{
+    width:35%;
+    margin:30px;
+    margin-right:80px;
+    
+    height:300px;
+
+    
+}
+.hin
+{
+  display: flex;
+}
+.par
+{
+    color:white;
+    font-weight: bold;
+    font-size:18px;
+    
+}
+.ooo
+{
+    font-size:Bold;
+    color:white;
+    font-size:17px;
+}
+.sub1
+{
+    position: relative;
+    left:5%;
+
+}
+.balayya:not(:hover)
+{
+    background-image: url('https://img.freepik.com/free-photo/smooth-black-concrete-wall-background_53876-129744.jpg?ga=GA1.1.685554462.1718218240&semt=ais_user'); 
+}
+.balayya:hover 
+{
+  background-image: url('https://img.freepik.com/free-photo/abstract-orange-background-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color_1258-63782.jpg?ga=GA1.1.685554462.1718218240&semt=ais_user');  
+}
+input[type="radio"] {
+    transform: scale(1.2); 
+}
+.langbutton:hover
+{
+    background-image: url('https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30528.jpg?t=st=1720031841~exp=1720035441~hmac=a91c17db37320ce667a4793583ffb77ec920d47742c5834f18ab249f9f399124&w=740'); 
+}

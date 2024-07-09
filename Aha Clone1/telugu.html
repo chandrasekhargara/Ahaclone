@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="tii.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        @media (min-width: 1200px) {
+            .carousel-item img {
+                height: 60vh;
+                width: 100%;
+                object-fit: cover;
+                background-size: cover;
+            }
+        }
+
+      
+
+        
+
+        .text {
+            color: #fff;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0 4%;
+            background: black;
+            z-index: 9;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            border-color: white;
+            transition: background-color 0.5s;
+        }
+
+        .navbar:hover {
+            background-color: rgba(12, 17, 27, 0.8);
+        }
+
+        .brand-logo {
+            height: 90px;
+            width: 70px;
+        }
+
+        .nav-link {
+            margin-top: 0px;
+            display: flex;
+            list-style: none;
+            color: #fff;
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .nav-link:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .right-container {
+            display: block;
+            margin-left: auto;
+        }
+
+        .search-box {
+            border: none;
+            border-bottom: 1px #aaa;
+            background-color: transparent;
+            outline: none;
+            height: 30px;
+            color: #fff;
+            width: 150px;
+            text-transform: capitalize;
+            font-size: 12px;
+            font-weight: 300;
+            transition: .5s;
+            align-content: center;
+            text-align: center;
+        }
+
+        .search-box:focus {
+            transform: scale(1.0);
+            width: 200px;
+            border-color: #1f80e0;
+        }
+
+        .sub-btn {
+            background-color: orangered;
+            height: 50px;
+            width: 160px;
+            padding: 0 20px;
+            color: #fff;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 12px;
+            margin: 0 10px;
+        }
+
+        .sub-btn:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .login-link {
+            color: #fff;
+            opacity: 0.9;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="file:///C:/Users/garac/OneDrive/Desktop/Aha%20Clone1/index.html"><img class="brand-logo" src="https://www.aha.video/assets/images/logo/aha-logo.svg"></a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/garac/OneDrive/Desktop/Aha%20Clone1/index.html"><p class="text">Home</p></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="file:///C:/Users/garac/OneDrive/Desktop/Aha%20Clone1/responsive%20carousal.html"><p class="text">Telugu Indian Idol</p></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><p class="text">Movies</p></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><p class="text">Shows</p></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#freemovies"><p class="text">Watch for Free</p></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/garac/OneDrive/Desktop/Aha%20Clone1/offers.html"><p class="text">Offers</p></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/garac/OneDrive/Desktop/Aha%20Clone1/choose.html"><p class="text">My aha</p></a>
+                </li>
+            </ul>
+            <div class="right-container">
+                <input type="text" class="search-box" placeholder="search">
+                <a href="file:///C:/Users/garac/OneDrive/Desktop/Aha%20Clone1/lang.html"><img class="searchbtn" src="https://res.cloudinary.com/dqqmtgyki/image/upload/v1720336128/gqb3conepfuwpht6evhn.png"></a>
+                <a href="file:///C:/Users/garac/OneDrive/Desktop/Aha%20Clone1/choose.html"><button class="sub-btn">subscribe Now</button></a>
+                <a href="login.html" class="login-link"><img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" class="logo">
+                Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/BFBD4996-C959-4396-8B21-BF2C5A4B79A8/0-3x1.jpg?width=2310&updatedTime=2024-07-06T15:10:59Z&dt=Web" class="d-block w-100" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/3097C6A3-C8F7-4AB2-BB11-AC6E4D13028B/0-3x1.jpg?width=2310&updatedTime=2024-07-06T15:12:47Z&dt=Web" class="d-block w-100" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/0BE54195-B576-41D9-85D8-553C356B9354/0-3x1.jpg?width=2310&updatedTime=2024-07-05T17:38:35Z&dt=Web" class="d-block w-100" alt="Slide 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/AEAA5AC1-CA4B-4DBF-9512-DDF6A3EE282E/0-3x1.jpg?width=2310&updatedTime=2024-07-06T02:55:28Z&dt=Web" class="d-block w-100" alt="Slide 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/237199C9-6ECE-4C24-98EE-DE2182D0CE6E/0-3x1.jpg?width=2310&updatedTime=2024-06-28T12:52:53Z&dt=Web" class="d-block w-100" alt="Slide 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/E3989CC2-F4C8-4223-BB4E-4020F7E11D5A/0-3x1.jpg?width=2310&updatedTime=2024-06-28T12:52:01Z&dt=Web" class="d-block w-100" alt="Slide 6">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/1C71328B-2D13-4042-B666-E9DC138A01B6/0-3x1.jpg?width=2310&updatedTime=2024-06-28T12:50:52Z&dt=Web" class="d-block w-100" alt="Slide 7">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/BBFADA18-CF56-4DA9-A709-B571051B6609/0-3x1.jpg?width=2310&updatedTime=2024-07-05T11:04:22Z&dt=Web" class="d-block w-100" alt="Slide 8">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://image-resizer-cloud-api.akamaized.net/image/B035782B-C49D-490C-86DD-3AB0F506260F/0-3x1.jpg?width=2310&updatedTime=2024-06-08T12:24:46Z&dt=Web" class="d-block w-100" alt="Slide 9">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <br>
+    <br>
+
+    <h1 class="title mt-5">Telugu Indian Idol 3</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/3097C6A3-C8F7-4AB2-BB11-AC6E4D13028B/0-2x3.jpg?width=305&updatedTime=2024-07-06T15:12:47Z&dt=MWeb" alt="" class="card-img">
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/3097C6A3-C8F7-4AB2-BB11-AC6E4D13028B/0-2x3.jpg?width=305&updatedTime=2024-07-06T15:12:47Z&dt=MWeb" alt="" class="card-img">
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/0BE54195-B576-41D9-85D8-553C356B9354/0-2x3.jpg?width=305&updatedTime=2024-06-29T13:24:02Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/AEAA5AC1-CA4B-4DBF-9512-DDF6A3EE282E/0-2x3.jpg?width=305&updatedTime=2024-06-29T13:27:30Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/237199C9-6ECE-4C24-98EE-DE2182D0CE6E/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:52:53Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E3989CC2-F4C8-4223-BB4E-4020F7E11D5A/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:52:01Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/1C71328B-2D13-4042-B666-E9DC138A01B6/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:50:52Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/BBFADA18-CF56-4DA9-A709-B571051B6609/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:48:52Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/B035782B-C49D-490C-86DD-3AB0F506260F/0-2x3.jpg?width=305&updatedTime=2024-06-08T12:24:46Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/21706A0E-6346-4F72-B331-AC6C934214F0/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:47:44Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/270B3F29-6F61-4DEF-A2E7-9E7C8605BDBD/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:52:14Z&dt=Web" alt="" class="card-img">
+                
+
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/270B3F29-6F61-4DEF-A2E7-9E7C8605BDBD/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:52:14Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/21706A0E-6346-4F72-B331-AC6C934214F0/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:47:44Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/BBFADA18-CF56-4DA9-A709-B571051B6609/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:48:52Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/AEAA5AC1-CA4B-4DBF-9512-DDF6A3EE282E/0-2x3.jpg?width=305&updatedTime=2024-06-29T13:27:30Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/237199C9-6ECE-4C24-98EE-DE2182D0CE6E/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:52:53Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E3989CC2-F4C8-4223-BB4E-4020F7E11D5A/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:52:01Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/1C71328B-2D13-4042-B666-E9DC138A01B6/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:50:52Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/BBFADA18-CF56-4DA9-A709-B571051B6609/0-2x3.jpg?width=305&updatedTime=2024-06-28T12:48:52Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/B035782B-C49D-490C-86DD-3AB0F506260F/0-2x3.jpg?width=305&updatedTime=2024-06-08T12:24:46Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/21706A0E-6346-4F72-B331-AC6C934214F0/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:47:44Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/270B3F29-6F61-4DEF-A2E7-9E7C8605BDBD/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:52:14Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Recently Added -->
+
+    <h1 class="title">Telugu Indian Idol 2</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+        <div class="card-container">
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/FA40DD80-91B3-4F7F-8029-B14E859B976E/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:24:35Z&dt=MWeb" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/7E8962E6-CDC6-4719-A82B-777330C2019A/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:19:35Z&dt=MWeb" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/EE0DCA40-C888-45E3-94AF-D9223C375432/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:20:16Z&dt=MWeb" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/F98A7FB4-6845-48C3-8AEB-396C9801EC85/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:29:32Z&dt=MWeb" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/F7C30012-DF5D-4EAC-99BB-4BD2EB766C45/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:19:27Z&dt=MWeb" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/2EE376B8-CA7A-447C-999A-1A7FED725569/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:18:49Z&dt=MWeb" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/D8454332-0297-4F11-AE92-49AE3B7B488C/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:29:45Z&dt=MWeb" alt="" class="card-img">
+               
+            </div>
+            
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/45213B25-7847-41ED-BF67-7D51B21E5A9E/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:31Z&dt=MWeb" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/2CCBDFD0-F361-42B3-A16F-B88375F8A4B9/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:20:02Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/3A086300-37C7-4AA9-9F04-CD40B2B0CF55/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:34Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+           
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/D21B8851-4605-4FE8-896A-8F09CB4FA825/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:19:21Z&dt=Web" alt="" class="card-img">
+               
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/DE67BF95-1C59-49CF-B5B8-9191DAAE0D25/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:15Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/5705F945-8BEA-428A-BB82-9FB0098ACFDD/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:10Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/5EEE963C-D163-4FE1-81B4-3EE3EE6AC342/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:20:00Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/6BA0F3E6-4E3A-4D6C-ADC4-59810645C285/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:08:46Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/D124A560-9D2B-4677-BB8D-A32F9634390A/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:24:27Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/D2BC077B-F5F9-482D-A0F3-426B4FE11265/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:24:37Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/8D37D6DD-E46F-47F6-B5ED-85CB4E40E724/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:18:46Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/D41E377D-76D3-4381-9F36-35E88C10E8B4/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:36:50Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/77C6EBB4-9794-4627-85AE-681B333AD855/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:21:53Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- New Releases -->
+    
+    <h1 class="title">Telugu Indian Idol 1</h1>
+    <div class="movies-list">
+        <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+        <div class="card-container">
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/48068FF3-72C1-4AA9-A632-80A668890B9B/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:08:54Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/6AD5CC74-6EFC-4768-BA8D-DD39E2A87B8F/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:19:52Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/354F97E3-2142-4A9F-B334-EDB13179C04C/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:28:47Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/AF2D1BF6-6589-4F64-94EE-6DFE31E49E07/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:36:56Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/45C903B9-0ABD-4685-8CDE-7C821785109D/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:08:41Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/A90ADA53-D7C1-425E-9FA1-97486DB5973B/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:29:26Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/AF217DE0-9BC0-423A-8B9E-0C056DFEDCA5/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:19:37Z&dt=Web" alt="" class="card-img">
+               
+            </div>
+            
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/C491F94D-5366-465C-8D95-B98EFA282184/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:05:38Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/850F7A9C-C37E-46C5-B80F-248337212CF1/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:19:39Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/47AD03E7-40C7-4E70-9965-86CE9AF3C0FF/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:19Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+           
+
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/9368B9A5-4532-4893-BB80-479C61D430D3/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:09:16Z&dt=Web" alt="" class="card-img">
+               
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/1E8C84E9-1EDE-4C4C-97DA-203040FEFDB9/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:27Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E272658E-E7A1-47CB-A609-73D2CA63C0B0/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:52Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/DACE3206-0BD8-4AA3-9FDC-64E824668AD1/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:05:24Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E43E9EBB-2017-4999-B00C-3571CEE651E3/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:19:44Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/2E9D2696-F86E-489F-8C55-0770C3DEE5A8/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:28:50Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/8B068B1A-0000-456F-93D8-9F75798EF1D3/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:08:50Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/32CED4FC-7C32-4529-B8F8-20AB5F99AF7A/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:29:34Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/A3CEC9DC-EA4C-4970-B552-FC60587478B5/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:29:38Z&dt=Web" alt="" class="card-img">
+                
+            </div>
+            <div class="card">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/A410C339-0529-48BC-9D26-FB1DA17D0BA2/0-2x3.jpg?width=305&updatedTime=2024-06-28T02:37:07Z&dt=Web" alt="" class="card-img">     
+            </div>
+
+        </div>
+    </div>
+    <!---Fununlimited--->
+    <h1 class="title">Fun Unlimited</h1>
+    <div class="movies-list1">
+        <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+        <div class="card-container1">
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/79B86BC9-9AAA-4703-8AB6-A49BC618B0FC/0-16x9.jpg?width=305&updatedTime=2024-03-19T02:57:54Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/C087B074-BB03-492F-BE5F-B696D13C5705/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:29:53Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/8108273F-1386-477A-BA63-EB596BAA41D6/0-16x9.jpg?width=305&updatedTime=2024-03-19T05:03:14Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/4513FFD1-63AF-48BB-A84D-8408A549E454/0-16x9.jpg?width=305&updatedTime=2024-03-19T02:57:54Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E9A70B44-2E8E-43C2-88F0-5A6C518BEDC4/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:12:33Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/21E47298-E11A-4FD6-9A1E-A088565018BC/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:25:53Z&dt=Web" alt="" class="card-img1">
+               
+            </div>
+            
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/B38A9F16-8761-42A2-94CE-F207738D67EC/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:34:11Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/9B67B5EA-44D7-4AB9-AA83-3F0D6AF7B3C0/0-16x9.jpg?width=305&updatedTime=2022-07-22T02:26:04Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/7422C41F-18E8-45E9-B214-B564F9FD5068/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:20:00Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+           
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/F2242B04-3EDE-460F-ACB4-552FD3EAD86C/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:48:18Z&dt=Web" alt="" class="card-img1">
+               
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/1A17293C-E560-4C2D-8E55-F42455F5B64F/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:15:31Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/774B2755-8224-45A9-908C-68A8D44FF5B6/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:55:08Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/3280D8A7-DD54-4DA0-9CF6-B98786F7118C/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:33:57Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/1127C324-4BE6-4570-8C3A-C18606F8B706/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:39:40Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/833EF2EC-AF17-4C30-82B1-75D054A7201E/0-16x9.jpg?width=305&updatedTime=2024-03-19T02:55:51Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/833EF2EC-AF17-4C30-82B1-75D054A7201E/0-16x9.jpg?width=305&updatedTime=2024-03-19T02:55:51Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/22FCBFFD-D0A0-4E7A-96A7-671E724C0800/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:23:33Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/0E8F9452-A06A-4402-993B-46198492D093/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:27:14Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/DA5EDE85-AEE6-4266-A505-78EDEEC66DEC/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:26:59Z&dt=Web" alt="" class="card-img1">     
+            </div>
+
+        </div>
+    </div>
+    <!---memorable moments--->
+    <h1 class="title">Memorable Moments</h1>
+    <div class="movies-list1">
+        <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+        <div class="card-container1">
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/67BB38B7-6A61-4636-A513-0C38668F3459/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:32:45Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/7266A386-9446-40D6-B9F1-941A2D4B8D81/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:59:05Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/2C02F33E-01A6-48A2-BDFE-01F165B45F47/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:35:40Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/5D24960D-F240-434B-AEF3-BCD07DBA17D1/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:34:33Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/7D6C8022-4E74-4C52-B9D9-0586DB12BCB3/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:25:50Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/21F13CD1-B7C6-4D5F-BA91-EEFBF6EB1CC0/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:26:32Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/448D0E5C-FE3A-42DD-A0C3-31F9CA99F843/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:50:30Z&dt=Web" alt="" class="card-img1">
+               
+            </div>
+            
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/CC813FD4-B18B-426A-8FBB-D9128EEB624B/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:03:01Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/72F9E185-6BB9-4C06-925F-8650DDBE474F/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:35:23Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/88A81841-287F-4C8A-AB55-138AE75DBE41/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:17:48Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+           
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/47A4E79E-A1F0-4245-9D7A-F64868CA76CD/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:56:07Z&dt=Web" alt="" class="card-img1">
+               
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/9D50CCDA-10E8-4568-B2C6-EEFB9D9078C5/0-16x9.jpg?width=305&updatedTime=2024-03-19T04:58:02Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/9C800AE3-E255-4E86-9E7B-8C0D3DE06DC0/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:29:35Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/DB5A4B37-D925-4DA0-B1B9-05F7A08775D6/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:36:08Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/4857C42D-5232-4922-B180-A974DE4F37AB/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:48:52Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/956B9830-2BCC-4A10-9A1B-3B6073CBC6CA/0-16x9.jpg?width=305&updatedTime=2024-03-19T05:19:40Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/05FD455F-0CF9-4A34-A3D5-C187547BB834/0-16x9.jpg?width=305&updatedTime=2024-03-19T05:15:03Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/7AA1757A-0CCA-4AF6-AF1F-59C155A2B2D3/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:42:06Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/CFD577C8-725C-435C-95BB-37C3AD8BF454/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:52:46Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/179AFFF9-7801-4C1F-896D-1E939B735702/0-16x9.jpg?width=305&updatedTime=2024-03-19T05:21:37Z&dt=Web" alt="" class="card-img1">     
+            </div>
+
+        </div>
+    </div>
+    <!---iconic moments--->
+    <h1 class="title">Iconic Moments</h1>
+    <div class="movies-list1">
+        <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+        <div class="card-container1">
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E74629C7-1C81-4914-AF38-A21460002167/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:38:25Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/297D8F6A-C78E-409E-A7F0-D685BE2DA7BA/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:57:44Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/23AF3E16-B084-4A9F-B1D7-13BD78F9645F/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:43:54Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/AD85EB36-55D6-4953-B916-F5EC62E4B450/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:02:36Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/B7CB0D72-C81C-479E-88BE-BC875EC40A15/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:00:18Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/6D6580C9-9F7B-46CA-B134-540A522AB7A5/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:46:38Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/90926790-A559-47B2-8324-A2091003667A/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:11:38Z&dt=Web" alt="" class="card-img1">
+               
+            </div>
+            
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E64F7F00-F589-4863-91BF-119C2EE7B4E2/0-16x9.jpg?width=305&updatedTime=2024-03-19T07:59:10Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/A9CF72D5-84F8-4C5C-BDD1-B858600AFE5B/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:03:52Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E351A422-017C-470F-B5D9-287458F09FB3/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:34:58Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+           
+
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/FE1AD2D6-B306-4296-AF84-0F76B27F82BD/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:48:16Z&dt=Web" alt="" class="card-img1">
+               
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/85CACC90-2A4B-4643-995B-E6BB89BEBDE1/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:46:35Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/9081A5DF-5CA8-4651-B16C-B31049884158/0-16x9.jpg?width=305&updatedTime=2024-03-19T03:53:13Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/37C69A76-CFD5-4835-B24B-E1AE4BE8AB64/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:15:28Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/95CE02E9-343D-4079-97C1-40D21B1CAAC5/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:13:58Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/2EE52FD1-3DEC-4758-A5EA-E2F52E1D3B78/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:45:24Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/5F5CD7B6-35E2-4DFD-916B-00075701795F/0-16x9.jpg?width=305&updatedTime=2024-03-19T04:37:52Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/F1160634-E88B-4C29-AA57-3AE93E7B8B48/0-16x9.jpg?width=305&updatedTime=2024-03-19T08:39:30Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/F3AF3D18-75F5-4A40-977A-C55860DE51D9/0-16x9.jpg?width=305&updatedTime=2024-03-19T09:05:30Z&dt=Web" alt="" class="card-img1">
+                
+            </div>
+            <div class="card1">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/A5A774D6-355B-4218-A5E0-4B5AA8AC9744/0-16x9.jpg?width=305&updatedTime=2024-03-19T06:26:25Z&dt=Web" alt="" class="card-img1">     
+            </div>
+
+        </div>
+    </div>
+   <hr>
+<div class="container">
+    <div class="row">   
+        <div class=" col-lg-3 col-md-6 col-sm-6 col-6 card2">
+            <p class="lo">Popular Telugu Movies</p>
+            <a href=""><p class="j">Chunduru Police Station</p></a>
+            <a href=""><p class="j">Tantra</p></a>
+            <a href=""><p class="j">Sundaram Master</p></a>
+            <a href=""><p class="j">Bhootaddam Bhaskara Narayana</p></a>
+            <a href=""><p class="j">Ambajipeta Marriage band</p></a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-6 card3 ">
+            <p class="lo">Must watch Movies</p>
+            <a href=""><p class="j">My Dear donga</p></a>
+            <a href=""><p class="j">Mix Up</p></a>
+            <a href=""><p class="j">Bhamakalapam 2</p></a>
+            <a href=""><p class="j">Polimera 2</p></a>
+            <a href=""><p class="j">Keeda Kola</p></a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-6 card4 ">
+            <p class="lo">Genres</p>
+            <a href=""><p class="j">Telugu Drama Movies</p></a>
+            <a href=""><p class="j">Telugu Comedy Movies</p></a>
+            <a href=""><p class="j">Telugu Action Movies</p></a>
+            <a href=""><p class="j">Telugu Romance Movies</p></a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-6 card5 ">
+            <p class="lo">Learn More</p>
+            <a href=""><p class="j">View Plans</p></a>
+            <a href=""><p class="j">About Us</p></a>
+            <a href=""><p class="j">FAQs/Help</p></a>
+            <a href=""><p class="j">Privacy Policy</p></a>
+            <a href=""><p class="j">Terms of service</p></a>
+            <a href=""><p class="j">Grievance Redressal</p></a>
+            <a href=""><p class="j">Blog</p></a>
+        </div>
+         <div class="col-12 ">
+            <a href=""><img class="im" src="https://res.cloudinary.com/drdsoeley/image/upload/v1720018857/syjzzdadfmeqnf8nm2bq.png"></a>
+            <br>
+            <br>
+            <p class="n">Connect with us</p>
+            <div class="sub1">
+                <a href=""><img class="i" src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png"/></a>&nbsp;&nbsp;&nbsp;
+                <a href=""><img class="i" src="https://cdn-icons-png.flaticon.com/128/733/733547.png"/></a>&nbsp;&nbsp;&nbsp;
+                <a href=""><img class="i" src="https://cdn-icons-png.flaticon.com/128/2504/2504947.png"/></a>
+            </div>
+            <br>
+            <p class="n">Download aha mobile app</p>
+            <div class="sub2">
+                <a href=""><img class="imag" src="https://www.aha.video/assets/images/social/google_play_mobile.svg"/></a>&nbsp;&nbsp;&nbsp;
+                <a href=""><img class="imag" src="https://www.aha.video/assets/images/social/app_store_mobile.svg"/></a>
+            </div>
+            <br>
+            <div class="sub1">
+                <p class="n">Contact us:</p>
+                <a href="mailto:support@aha.video" class="ai">support@aha.video</a>
+                <br>
+            </div>
+            <div style="align-content:center; text-align:center;">
+                <p style="color:grey; font-size:12px"> Powered by &nbsp; <img src="https://res.cloudinary.com/drdsoeley/image/upload/v1720365239/foheyloyyq3ognzw4m3e.png" class="quickplay"> </p>
+                <p style="color:white;">&copy; Copyright 2024 Arha Media and Broadcasting Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src=""></script>
+</body>
+
+</html>

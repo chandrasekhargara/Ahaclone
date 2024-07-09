@@ -1,0 +1,95 @@
+/* Basic reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #fff; /* Navbar background color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.navbar-brand {
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: none; /* Hidden by default on larger screens */
+}
+
+.navbar-toggler-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 17px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>');
+    background-repeat: no-repeat;
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin-right: 15px; /* Adjust spacing between items */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-weight: bold;
+}
+
+.right-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc; /* Search box border color */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.searchbtn, .sub-btn {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-weight: bold;
+}
+
+.logo {
+    width: 20px; /* Adjust size as needed */
+    margin-right: 5px; /* Adjust spacing */
+}

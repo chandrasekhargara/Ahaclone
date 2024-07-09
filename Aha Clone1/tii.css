@@ -1,0 +1,347 @@
+ .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 30px;
+    top:60px;
+ }
+
+ .carousel {
+    display: flex;
+   
+    height: 100%;
+    position: relative;
+    margin: auto;
+    top:75px;
+ }
+
+ .title {
+    color: #fff;
+    opacity: 0.9;
+    padding-left: 4%;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+ }
+
+ .movies-list {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin: 10px 0 20px;
+ }
+
+ .card-container {
+    position: absolute;
+    width: 96%;
+    padding-left: 4%;
+    height: 220PX;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+ }
+
+ .card-container::-webkit-scrollbar {
+    display: none;
+ }
+
+ .card {
+    position: relative;
+    min-width: 130px;
+    width: 120px;
+    height: 190px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+    transition: .5s;
+    background: #000;
+ }
+ 
+
+ .card:hover {
+   transform: scale(1.1);
+}
+ .card:hover .card-body {
+    opacity: 1;
+ }
+
+ .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+ }
+
+ .card-body {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+ }
+
+.ogcard {
+    position: relative;
+    min-width: 330px;
+    width: 330px;
+    height: 490px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+    transition: .5s;
+    background: #000;
+ }
+ .ogcard:hover {
+   transform: scale(1.1);
+}
+ .ogcard:hover .card-body {
+    opacity: 1;
+ }
+ .ogcard-img {
+   width:330px;
+   height: 490px;
+   object-fit: contain;
+}
+.ogcard-container {
+   position: absolute;
+   width: 96%;
+   padding-left: 4%;
+   height: 500PX;
+   display: flex;
+   margin: 0 auto;
+   align-items: center;
+   overflow-x: auto;
+   overflow-y: visible;
+   scroll-behavior: smooth;
+}
+
+.ogcard-container::-webkit-scrollbar {
+   display: none;
+}
+.ogpre-btn,
+ .ognxt-btn {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+ }
+
+ .ogpre-btn {
+    left: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+ }
+
+ .ognxt-btn {
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+ }
+
+ .ogpre-btn img,
+ .ognxt-btn img {
+   
+   margin-top: 180px;
+    width: 40px;
+    height: 60px;
+    opacity: 0;
+ }
+ 
+ .ogpre-btn:hover img,
+ .ognxt-btn:hover img {
+    opacity: 1;
+ }
+
+
+ .pre-btn,
+ .nxt-btn {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+ }
+
+ .pre-btn {
+    left: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+ }
+
+ .nxt-btn {
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+ }
+
+ .pre-btn img,
+ .nxt-btn img {
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+ }
+ 
+ .pre-btn:hover img,
+ .nxt-btn:hover img {
+    opacity: 1;
+ }
+ .margap{
+   margin-top: 300px;
+ }
+ .actorsA-z{
+   height: 150px;
+   width: 150px;
+   border-radius: 100px;
+   margin-left: 40px;
+ }
+ .actorsA-z:hover{
+   transform: scale(1.1);
+   opacity: 1;
+   transition: 0.5s;
+ }
+ .text1{
+   color: #fff;
+   margin-left: 40px;
+ }
+ 
+ .im
+{
+    width:10vw;
+   height:45px;
+}
+.i
+{
+    width:30px;
+    height:30px;
+}
+.imag
+{
+    width:120px;
+    height:0px;
+
+
+}
+
+.d
+{
+    display:flex
+}
+.n
+{
+  font-size:16px; 
+  color:white; 
+}
+.ai
+{
+    color:orangered;
+    font-size:14px; 
+}
+.j
+{
+color:#96969d;
+
+}
+.car
+{
+    padding:50px;
+    background-color: #0c111b;
+   border-style:solid;
+
+
+}
+.k
+{
+    font-size:16px;
+    color:white;
+}
+a
+{
+  text-decoration: none;  
+
+}
+.lo
+{
+  font-size:16px; 
+  color:white; 
+}
+
+ .movies-list1 {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    margin: 10px 0 0px;
+ }
+
+ .card-container1{
+    position: absolute;
+    width: 96%;
+    padding-left : 4%;
+    height: 120px;
+    display: flex;
+    margin: 0 ;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    object-fit:cover;
+    background-size:cover;
+ }
+
+ .card-container1::-webkit-scrollbar {
+    display: none;
+ }
+
+ .card1 {
+    position: relative;
+    min-width: 160px;
+    
+    border-radius: px;
+    overflow: hidden;
+    margin-left: 10px;
+   transition: .5s;
+    background: black;
+ }
+ 
+
+ .card1:hover {
+   transform: scale(1.1);
+}
+ .card1:hover .card-body {
+    opacity: 1;
+ }
+
+ .card-img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   border-radius: 5px;
+ }
+
+ .card-body1 {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+ }
+ .quickplay{
+   height:20px;
+   width:80px;
+}

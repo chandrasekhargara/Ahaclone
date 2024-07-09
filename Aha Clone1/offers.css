@@ -1,0 +1,58 @@
+
+body {
+    padding: 20px;
+    background-image: url("https://res.cloudinary.com/drdsoeley/image/upload/v1719743058/g0o8aqlwklil0d95rcsh.png");
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ahalogo {
+    height: 40px;
+    width: 135px;
+    margin-bottom: 20px;
+    margin-top:10px;
+}
+
+.content {
+    text-align: center;
+}
+
+.image {
+    height: 450px;
+    width: 90%;
+    padding: 10px;
+    margin: 20px;
+}
+
+.button {
+    border-radius: 15px;
+    border: none;
+    background-color: orangered !important;
+    width: 250px;
+    height: 56px;
+    font-family: "Roboto";
+    font-size: 16px;
+    color: white !important;
+    font-weight: bolder !important;
+    margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .image {
+        content: url("https://res.cloudinary.com/drdsoeley/image/upload/v1719760774/v8scyb4xbsgmorlm9arv.png");
+    }
+}
+
+@media (min-width: 1001px) {
+    .image {
+        content: url("https://res.cloudinary.com/drdsoeley/image/upload/v1719760774/v8scyb4xbsgmorlm9arv.png");
+    }
+}
